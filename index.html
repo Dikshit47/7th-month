@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>7th Month Anniversary ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:#0f0f0f;
+overflow:hidden;
+font-family:'Caveat',cursive;
+color:white;
+text-align:center;
+}
+
+.page{
+display:none;
+height:100vh;
+padding:30px;
+overflow-y:auto;
+}
+
+.active{
+display:block;
+}
+
+button{
+padding:12px 25px;
+font-size:20px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin-top:20px;
+background:#ff4d6d;
+color:white;
+}
+
+h1{
+font-size:55px;
+}
+
+p{
+font-size:35px;
+line-height:1.5;
+}
+
+.photo{
+width:280px;
+height:350px;
+object-fit:cover;
+border-radius:20px;
+margin:10px;
+}
+
+.heart{
+position:absolute;
+animation:float 8s linear infinite;
+font-size:25px;
+}
+
+.panda{
+position:absolute;
+animation:float 12s linear infinite;
+font-size:35px;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+}
+
+100%{
+transform:translateY(-100vh);
+}
+
+}
+
+.final{
+font-size:60px;
+color:pink;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<audio autoplay loop>
+
+<source src="music.mp3">
+
+</audio>
+
+<div id="page1" class="page active">
+
+<h1>❤️ 7th Month Anniversary ❤️</h1>
+
+<h2>Bhoomikshit ✨</h2>
+
+<p>
+
+7 months...
+
+Sirf ek number nahi...
+
+Meri zindagi ke sabse khoobsurat pal hain.
+
+</p>
+
+<button onclick="nextPage(2)">Next ❤️</button>
+
+</div>
+
+<div id="page2" class="page">
+
+<h1>✨ Our Journey ✨</h1>
+
+<p>
+
+Tum meri aadat ban gayi ho.
+
+Meri smile ban gayi ho.
+
+Mera sukoon ban gayi ho.
+
+Har future imagination me sirf tum ho.
+
+</p>
+
+<button onclick="nextPage(3)">Next ❤️</button>
+
+</div>
+
+<div id="page3" class="page">
+
+<h1>📸 Our Memories 📸</h1>
+
+<img src="photo1.jpg" class="photo">
+
+<img src="photo2.jpg" class="photo">
+
+<img src="photo3.jpg" class="photo">
+
+<p>
+
+Har photo ke peeche ek kahani hai...
+
+Aur har kahani me sirf hum hain ❤️
+
+</p>
+
+<button onclick="nextPage(4)">Next ❤️</button>
+
+</div>
+
+<div id="page4" class="page">
+
+<h1>💌 Surprise Letter 💌</h1>
+
+<p>
+
+Dear Bhoomi,
+
+Pata hai?
+
+Kabhi kabhi main bina wajah smile karta hoon...
+
+Aur phir yaad aata hai...
+
+Wajah tum ho.
+
+Tumhari har choti si baat mujhe special lagti hai.
+
+Hum sirf do log nahi hain...
+
+Hum Bhoomikshit hain ❤️
+
+</p>
+
+<button onclick="nextPage(5)">Final ❤️</button>
+
+</div>
+
+<div id="page5" class="page">
+
+<h1>✨ Forever & Always ✨</h1>
+
+<p>
+
+Main tumhe chand se compare nahi karunga...
+
+Kyuki chand door hai...
+
+Tum mere dil ke sabse kareeb ho.
+
+Agar kabhi duniya tumhe thaka de...
+
+Toh yaad rakhna...
+
+Ek insaan hamesha tumhare saath khada rahega.
+
+Mera pyaar har guzarte din ke saath aur gehra hota jayega.
+
+Thank you meri smile banne ke liye.
+
+Thank you meri safe place banne ke liye.
+
+Thank you meri Bhoomi banne ke liye ❤️
+
+</p>
+
+<h1 class="final">
+
+I LOVE U SO MUCH MERA BACHCHA 😘😚
+
+</h1>
+
+<h1>❤️ BHOOMIKSHIT ❤️</h1>
+
+</div>
+
+<script>
+
+function nextPage(page){
+
+document.querySelectorAll('.page').forEach(p=>{
+
+p.classList.remove('active')
+
+})
+
+document.getElementById('page'+page).classList.add('active')
+
+}
+
+for(let i=0;i<20;i++){
+
+let heart=document.createElement('div')
+
+heart.className='heart'
+
+heart.innerHTML='❤️'
+
+heart.style.left=Math.random()*100+'vw'
+
+heart.style.animationDuration=(5+Math.random()*5)+'s'
+
+document.body.appendChild(heart)
+
+}
+
+for(let i=0;i<8;i++){
+
+let panda=document.createElement('div')
+
+panda.className='panda'
+
+panda.innerHTML='🐼'
+
+panda.style.left=Math.random()*100+'vw'
+
+panda.style.animationDuration=(8+Math.random()*5)+'s'
+
+document.body.appendChild(panda)
+
+}
+
+</script>
+
+</body>
+
+</html>
